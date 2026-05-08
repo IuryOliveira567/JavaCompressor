@@ -14,7 +14,7 @@ public class Rar extends Compactador {
         try {
 
             ProcessBuilder pb = new ProcessBuilder(
-                    "rar",
+                    "C:\\Program Files\\WinRAR\\Rar.exe",
                     "a",
                     arquivoSaida,
                     arquivoEntrada
@@ -23,10 +23,13 @@ public class Rar extends Compactador {
             pb.inheritIO();
 
             Process p = pb.start();
+            int resultado = p.waitFor();
 
-            p.waitFor();
-
-            System.out.println("Compactação RAR realizada!");
+            if (resultado == 0) {
+                System.out.println("Compactação RAR realizada!");
+             } else {
+                System.out.println("Erro na compactação RAR.");
+             }
 
         } catch (IOException | InterruptedException e) {
 
