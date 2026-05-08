@@ -23,7 +23,6 @@ public class Zip7 extends Compactador {
             pb.inheritIO();
 
             Process p = pb.start();
-
             p.waitFor();
 
             System.out.println("Compactação 7Z realizada!");

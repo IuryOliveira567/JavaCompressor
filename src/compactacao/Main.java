@@ -16,9 +16,7 @@ public class Main {
                 new Rar(entrada, "arquivo.rar");
 
         zip.compactar();
-
         zip7.compactar();
-
         rar.compactar();
     }
 }

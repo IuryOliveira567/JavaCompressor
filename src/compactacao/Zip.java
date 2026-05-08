@@ -27,7 +27,6 @@ public class Zip extends Compactador {
             pb.inheritIO();
 
             Process p = pb.start();
-
             p.waitFor();
 
             System.out.println("Compactação ZIP realizada!");
